@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="div_title">
+<h1 class="subtitle">Welcome at our checkout page!</h1>
+</div>
+<div class="checkout_main">
+    <div class="checkout_data">
+        <form class="checkout_form">
+            <div class="user_info">
+
+                <div class="field">
+                    <input class="field_conf" required type="text" name="name" placeholder="Name..">
+                </div>
+
+                <div class="field">
+                    <input class="field_conf" required type="text" name="surname" placeholder="Surname..">
+                </div>
+
+                <div class="field">
+                    <input class="field_conf" required type="email" name="email" placeholder="Email..">
+                </div>
+
+                <div class="field">
+                    <input class="field_conf" required type="tel" pattern="[0-9]{9}" name="phone_number" placeholder="Phone number..">
+                </div>
+
+                <div class="field">
+                    <input class="field_conf" required type="text" name="address" placeholder="Address..">
+                </div>
+
+                <div class="field">
+                    <input class="field_conf" required type="number" pattern="[0-9]{2}-[0-9]{3}" name="zip_code" placeholder="Zip code..">
+                </div>
+
+                <div class="field">
+                    <input class="field_conf" required type="text" name="city" placeholder="City..">
+                </div>
+
+                <div class="field">
+                <input class="submit" type="submit" value="Continue">
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+    <div class="checkout_summary">
+        <h1 style="text-align:center; border-bottom: 1px solid;">Order summary</h1>
+        <div class="cart_items_row">
+
+            <div style="flex:2;"><img class="cart_thumbnail" src="{% static 'item1.jpg' %}"></div>
+
+              <div style="flex:2;">Product 1</div>
+
+              <div style="flex:1;"><b>Price</b></div>
+
+              <div style="flex:1"> x2</div>
+
+            </div>
+
+        </div>
+
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="div_title">
+<h1 class="subtitle">Shopping Cart</h1>
+</div>
+<div class="cart_main">
+  <div class="div_table">
+    <table class="cart_table">
+      <tr>
+        <th><h5>Items: <strong>3</strong></h5></th>
+        <th><h5>Total: <strong>2353$</strong></h5></th>
+        <th><a class="cart_buy_button" href="{% url 'checkout' %}">I'm buying</a></th>
+      </tr>
+    </table>
+
+  </div>
+  <div class="cart_items">
+    <div class="cart_items_row">
+      <div style="flex:2;"></div>
+      <div style="flex:2;"><b>Item</b></div>
+      <div style="flex:1;"><b>Price</b></div>
+      <div style="flex:1;"><b>Quantity</b></div>
+      <div style="flex:1;"><b>Total</b></div>
+    </div>
+
+    <div class="cart_items_row">
+      <div style="flex:2;"><img class="cart_thumbnail" src="{% static 'item1.jpg' %}"></div>
+      <div style="flex:2;">Product 1</div>
+      <div style="flex:1;"><b>Price</b></div>
+      <div style="flex:1">
+        <p class="quantity">2</p>
+        <div class="quantity">
+          <img class="chg_quantity" src="{% static  'arrow-up.png' %}">
+
+          <img class="chg_quantity" src="{% static  'arrow-down.png' %}">
+        </div>
+      </div>
+      <div style="flex:1;"><b>Total</b></div>
+    </div>
+  </div>
+
+
+</div>
+{% endblock %}

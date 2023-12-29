@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+    <title>My shop</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+</head>
+<body bgcolor="orange">
+
+<div class="main_div">
+<div class="banner">
+        <h1 class="title">Welcome at <a href="{% url 'home'%}">Wayne's cars</a></h1>
+        <img class="banner_img" src="{% static 'banner.jpg' %}" alt="Banner">
+</div>
+
+<div class="navi">
+    <ul class="navi_list">
+        <li>
+            <a href="{% url 'shop'%}">Go shopping!</a>
+        </li>
+        <li>
+            <a href="{% url 'cart'%}">Your cart</a>
+        </li>
+        <li>
+            <a href="{% url 'checkout'%}">Checkout</a>
+        </li>
+        <li>
+            <a href="{% url 'socials'%}">Socials</a>
+        </li>
+        <li>
+            <a href="{% url 'about'%}">About</a>
+        </li>
+        <li>
+            <a href="{% url 'credits'%}">Credits</a>
+        </li>
+        <li>
+            <a href="{% url 'contacts'%}">Contacts</a>
+        </li>
+    </ul>
+</div>
+<div class="main">
+    {% block content %} {% endblock %}
+</div>
+</div>
+
+</body>
+</html>

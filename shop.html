@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1 class="subtitle">Welcome at our main shopping page!</h1>
+
+<div class="offer">
+
+    <div class="offer_img">
+        <img class="item1_img" src="{% static 'item1.jpg' %}" alt="item1" width="100%" height="100%">
+    </div>
+
+    <div class="add_to_cart">
+        <a class="shop_buy_button" href="#"><h1 class="shop_button_text" >Add to cart</h1></a>
+    </div>
+
+    <div class="price">
+        <h1 class="price_text">99999999.99 pln</h1>
+    </div>
+
+</div>
+
+<div class="offer">
+
+    <div class="offer_img">
+        <img class="item2_img" src="{% static 'item2.jpg' %}" alt="item2" width="100%" height="100%">
+    </div>
+
+     <div class="add_to_cart">
+        <a class="shop_buy_button" href="#"><h1 class="shop_button_text" >Add to cart</h1></a>
+    </div>
+    <div class="price">
+        <h1 class="price_text">21.37 pln</h1>
+    </div>
+</div>
+
+<div class="offer">
+
+    <div class="offer_img">
+        <img class="item3_img" src="{% static 'item3.jpg' %}" alt="item3" width="100%" height="100%">
+    </div>
+     <div class="add_to_cart">
+        <a class="shop_buy_button" href="#"><h1 class="shop_button_text" >Add to cart</h1></a>
+    </div>
+    <div class="price">
+        <h1 class="price_text">Out of stock</h1>
+    </div>
+</div>
+
+{% endblock %}
